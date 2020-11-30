@@ -19,6 +19,7 @@ struct EditItemView: View {
     
     init(item: Item) {
         self.item = item
+        
         _title = State(wrappedValue: item.itemTitle)
         _detail = State(wrappedValue: item.itemDetail)
         _priority = State(wrappedValue: Int(item.priority))

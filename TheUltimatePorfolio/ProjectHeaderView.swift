@@ -14,6 +14,7 @@ struct ProjectHeaderView: View {
         HStack {
             VStack(alignment: .leading) {
                 Text(project.projectTitle)
+                    .font(Font.system(size: 16, weight: .bold, design: .default))
                 
                 ProgressView(value: project.completionAmount)
                     .accentColor(Color(project.projectColor))
@@ -21,7 +22,7 @@ struct ProjectHeaderView: View {
             
             Spacer()
             
-            NavigationLink(destination: EmptyView()) {
+            NavigationLink(destination: EditProjectView(project: project)) {
                 Image(systemName: "square.and.pencil")
                     .imageScale(.large)
             }
