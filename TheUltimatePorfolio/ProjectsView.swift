@@ -66,6 +66,7 @@ struct ProjectsView: View {
                                         }
                                     } label: {
                                         Label("Add New Item", systemImage: "plus")
+                                            .foregroundColor(Color(project.projectColor))
                                     }
                                 }
                             }

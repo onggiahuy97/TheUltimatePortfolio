@@ -15,6 +15,7 @@ struct ProjectHeaderView: View {
             VStack(alignment: .leading) {
                 Text(project.projectTitle)
                     .font(Font.system(size: 16, weight: .bold, design: .default))
+                    .foregroundColor(Color(project.projectColor))
                 
                 ProgressView(value: project.completionAmount)
                     .accentColor(Color(project.projectColor))
