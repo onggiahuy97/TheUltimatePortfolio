@@ -30,3 +30,4 @@ struct TheUltimatePortfolioApp: App {
         dataController.save()
     }
 }
+
