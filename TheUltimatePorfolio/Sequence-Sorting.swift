@@ -8,7 +8,10 @@
 import Foundation
 
 extension Sequence {
-    func sorted<Value>(by keyPath: KeyPath<Element, Value>, using areIncreasingOrder: (Value, Value) throws -> Bool) rethrows -> [Element] {
+    func sorted<Value>(
+        by keyPath: KeyPath<Element, Value>,
+        using areIncreasingOrder: (Value, Value) throws -> Bool
+    ) rethrows -> [Element] {
         try self.sorted {
             try areIncreasingOrder($0[keyPath: keyPath], $1[keyPath: keyPath])
         }
